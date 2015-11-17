@@ -37,5 +37,5 @@ def main():
     except KeyboardInterrupt:
         print "^C entered, stop server"
         server.socket.close()
-if __name__ = '__main__':
+if __name__ == '__main__':
     main()
