@@ -1,0 +1,19 @@
+1. to create database for shelters   and  puppies.
+a shelter is defined as
+ Shelter
+    name
+    address
+    city
+    state
+    email
+    id
+a puppy is defined as:
+Puppy
+    name
+    date of birth
+    breed
+    gender
+    weight
+    shelter_id
+
+2. the practice includes  CRUD create update read delete records from database.
