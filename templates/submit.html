@@ -1,0 +1,40 @@
+<html>
+   <body>
+
+      <form action = "{{url_for('upload_info')}}" method = "POST"
+         enctype = "multipart/form-data">
+          Name:
+         <input name="name" type="text">
+          <br>
+          Phone Number:
+         <input name="phone" type="text">
+          <br>
+          ID Number:
+         <input name="id" type="text">
+          <br>
+          Address:
+         <input name="address" type="text">
+          <br>
+          Time:
+         <input name="time" type="text">
+          <br>
+          Provence:
+         <input name="provence" type="text">
+          <br>
+          Plate Number:
+         <input name="plate_number" type="text">
+          <br>
+          Plate Color:
+         <input name="plate_color" type="text">
+          <br>
+          Behavior:
+         <input name="behavior" type="text">
+          <br>
+          Video:
+          <input name="file" type="file">
+          <br>
+         <input type = "submit"/>
+      </form>
+
+   </body>
+</html>

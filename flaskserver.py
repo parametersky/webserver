@@ -32,9 +32,11 @@ def HelloWorld():
 def restaurantJSON():
     srestaurant = session.query(Restaurant).all()
     content = [i.serialize for i in srestaurant]
-    #return jsonify(Restaurants=[i.serialize for i in srestaurant],JSON_AS_ASCII=False)
-    result = "{'name':'水煮牛肉'}"
-    return json.dumps(result,ensure_ascii=False)
+    #return value as unicode string, not chinese character
+    return jsonify(Restaurants=[i.serialize for i in srestaurant],JSON_AS_ASCII=False,encoding='utf-8')
+    #return value as chinese
+    # result = "{'name':'水煮牛肉'}"
+    # return json.dumps(result,ensure_ascii=False)
 
 @app.route('/restaurant/<int:resid>/')
 def ShowMenu(resid):

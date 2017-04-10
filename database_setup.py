@@ -15,8 +15,10 @@ class Restaurant(Base):
     id = Column(Integer, primary_key = True)
     @property
     def serialize(self):
+        if isinstance(self.name,unicode):
+            name = self.name.encode('utf-8')
         return {
-                'name':self.name,
+                'name':name,
                 'id':self.id,
         }
 
